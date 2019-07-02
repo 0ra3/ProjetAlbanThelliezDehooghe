@@ -1,0 +1,26 @@
+.card {
+    max-width : 310px;
+    max-height : 340px;
+    color : black;
+    position: relative;
+    float: left;
+    margin-left: 30px;
+}
+
+.card header{
+    width :  104px;
+    height : 140px;
+}
+img {
+    width : 260px;
+    height : 200px;
+    position: center;
+}
+
+h5{
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+}

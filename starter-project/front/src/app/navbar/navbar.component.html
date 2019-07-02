@@ -1,0 +1,20 @@
+<nav>
+  <div>
+      
+    <ul routerLinkActive="active">
+
+      <li class="nav-item"><a class="nav-link" routerLink="home">Mon profil</a>
+      </li>
+
+      <li *ngIf="!authority">
+        <a class="nav-link" routerLink="auth/login">Login</a>
+      </li>
+      <li>
+          <a class="nav-link" routerLink="projets">Projets</a>
+      </li>
+      <li>
+        <a class="nav-link" routerLink="category">Categories</a>
+      </li>
+    </ul>
+  </div>
+</nav>

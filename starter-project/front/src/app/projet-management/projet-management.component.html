@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <br/>
+  <br/>
+  <br/>
+<div class="container">
+  <h4>Nouveau projet</h4>
+  <br/>
+  <form [formGroup]="projetForm" (ngSubmit)="saveProjet()">
+    <div >
+      <label for="nom">Nom</label>
+      <input formControlName="nom" type="text" id="nom"/> 
+    </div>
+    <div >
+        <label for="description">Description</label>
+        <input formControlName="description" type="text" id="description" /> 
+      </div>
+      <div>
+        <label for="budget">Budget</label>
+        <input formControlName="budget" type="number" id="budget" /> 
+      </div>
+      <div>
+          <label for="category">Categorie</label>
+          <select formControlName="category" >
+            <option value="">Choisissez</option>
+            <option *ngFor="let cat of categories" [ngValue]="cat">{{cat.nom}}</option>
+          </select>
+      </div>
+      <div >
+          <label for="image">image</label>
+          <input formControlName="image" type="text" id="image" /> 
+      </div>
+      <p></p>
+      <p></p>
+      <button class="btn btn-primary">Enregistrer</button>
+      
+  </form> 
+</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<div class="col md-6"  *ngIf="projet">
+    <div class="box">
+    <h2><u><b>{{projet.nom}}</b></u></h2>
+    <p><u><b>Catégorie:</b></u> {{projet.category.nom}}</p>
+    <p><u><b>Auteur:</b></u> {{projet.user.username}}</p>
+    <p><u><b>Description:</b></u> {{projet.description}}</p>
+    <p><u><b>Fonds collectés:</b></u> &nbsp; {{projet.ressource}} / {{projet.budget}} €</p>
+           
+          </div>
+        
+    <button class="btn btn-danger" (click)="deleteProjet(projet.id)">Supprimer</button> <a class="btn btn-info" routerLink="/projet/{{projet.id}}/dons">Financer ce projet</a>
+</div>
+<div class="col md-6">   
+    <img src={{projet.image}} alt="card image" style="width: auto; height: auto"/>
+  </div>
+

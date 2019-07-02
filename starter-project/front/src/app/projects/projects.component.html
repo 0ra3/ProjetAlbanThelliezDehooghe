@@ -1,0 +1,18 @@
+
+        <h1>Projets en cours</h1>
+        <br/>
+        <br/>
+        <br/>
+          <div class="card" *ngFor="let pro of projets">
+            <div class="card-header">
+              <img src={{pro.image}} alt="card image" class="rounded"/>
+            </div>
+            <div class="card-body"><h5><u><b>{{pro.nom}}</b></u></h5>
+              <div class="card-body">budget: {{pro.budget}} € &nbsp; &nbsp;
+                <a class="btn btn-primary" routerLink="/projet/{{pro.id}}">Détails</a>
+              </div>
+             </div>
+          </div>
+
+
+

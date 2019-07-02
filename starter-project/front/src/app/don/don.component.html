@@ -1,0 +1,8 @@
+
+<form [formGroup]="donForm" (ngSubmit)="save()">
+  <div class=".form-group">
+    <label for="montant">Montant de votre don</label>
+    <input formControlName="montant" type="number" id="montant" class="form-control"/>
+  </div>
+  <button class="btn btn-primary">Enregistrer votre don</button>
+</form>

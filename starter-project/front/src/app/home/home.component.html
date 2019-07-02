@@ -1,0 +1,22 @@
+<div *ngIf="info.token; else loggedOut">
+  <h5 class="text-primary">Mon compte</h5>
+
+  <button class="btn btn-secondary" (click)="logout()">Logout</button>
+</div>
+<ng-template #loggedOut>
+  Please <a routerLink="/auth/login">login here</a>.
+</ng-template>
+
+  <p *ngIf= "user">
+    <strong>Username:</strong> {{user.username}}<br/>
+    <strong>Roles:</strong> {{info.authorities}}<br />
+    <strong>Name:</strong> {{user.name}}<br/>
+    <strong>Email:</strong> {{user.email}}<br/>
+  </p>
+
+
+
+
+<div>
+  <a class="btn btn-outline-primary" routerLink="/nouveauprojet">New Project</a>
+</div>
